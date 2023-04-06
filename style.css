@@ -1,0 +1,439 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;/*equivalencia a 1rem*/
+}
+
+:root {
+    /*variables de css*/
+    --card_width: 15.625rem;
+    /*~250px Anchura de la tarjeta/pin */
+    --row_increment: 0.625rem;
+    /*~10px Al estar usando CSS grid, cada tarjeta/pin estará hecha con incrementos de 10px para las filas */
+    --card_border_radius: 1rem;
+    /*~16px  Redondeo en los bordes de las tarjetas/pines*/
+    --card_small: 26;
+    /* Factor de crecimiento para tarjetas pequeñas: 26*0.625rem */
+    --card_medium: 33;
+    /* Factor de crecimiento para tarjetas medianas: 26*0.625rem */
+    --card_large: 45;
+    /* Factor de crecimiento para tarjetas grandes: 26*0.625rem */
+}
+
+main {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    height: 100vh;
+    width: 100%;
+    background-color: blanchedalmond;
+    display: flex;
+}
+
+#navbar-pinterest {
+    height:5rem;
+    background-color:#fffffc; 
+    display: flex;
+}
+.navbar_pinterest_buttons_container{
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    width: 19rem;
+    height: 100%;
+    background-color: #fffffc;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+   
+}
+
+.navbar_pinterest_buttons{
+    padding-inline-start: -1rem;
+    width: 21rem;
+    height: 100%;
+    /*background-color: aquamarine;*/
+    border-radius: 1.5rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar_pinterest_buttons>svg {
+    cursor: pointer;
+    padding-inline-start: 0.2rem;
+    height: 48px;
+    width: 48px;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.Start_button{
+    cursor: pointer;
+    padding-inline-start: 0.1rem;
+    justify-content: center;
+    height: 3rem;
+    width: 23%;
+    background-color:#111111;
+    border-radius: 24px;
+    height: 3rem;
+    display: flex;
+    align-content:center;
+    flex-wrap: wrap;
+
+}
+
+.Today_button {
+    cursor: pointer;
+    height: 48px;
+    min-width: 60px;
+    border: none;
+    padding-inline-start: 0.2rem;
+    justify-content: center;
+    width: 23%;
+    height: 3rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color:  #fffffc;
+}
+
+.create_button {
+    cursor: pointer;
+    height: 48px;
+    min-width: 60px;
+    border: none;
+    padding-inline-start: 0.1rem;
+    justify-content: center;
+    height: 3rem;
+    width: 23%;
+    height: 3rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color:  #fffffc;
+}
+
+.down_button>svg {
+    height: 0.8rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
+
+
+.navbar_input_search_container {
+    justify-content: center;
+    flex-grow: 4;
+    min-width: 87.5rem;
+    background-color: #fffffc;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar_input_search {
+    align-items: center;
+    padding-inline-start: 1rem;
+    height: 3rem;
+    width: 100%;
+    background-color: #e9e9e6;
+    border-radius: 1.5rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+.navbar_input_search>svg {
+    margin: 5px;
+    justify-content: center;
+    height: 1rem;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.finder {
+    margin: 5px;
+    border: none;
+    height: 3rem;
+    flex-grow: 2;
+    border-radius: 1.5rem;
+    background-color: #e9e9e6 ;
+
+}
+
+.navbar_user_buttons_container {
+    width:16rem ;
+    height: 100%;
+    background-color: #fffffc;
+    
+
+}
+
+.navbar_user_buttons {
+    align-items: center;
+    padding-inline-start: 0.6rem;
+    width: 21rem;
+    height: 100%;
+    /*background-color: aquamarine;*/
+    /*border-radius: 1.5rem;*/
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    
+}
+
+#notifications{
+    cursor: pointer;
+    padding-inline-start: 0.2rem;
+    height: 48px;
+    width: 48px;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    fill: #5f5f5e;
+
+}
+
+#message{
+    cursor: pointer;
+    padding-inline-start: 0.2rem;
+    height: 48px;
+    width: 48px;
+    height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    fill: #5f5f5e;
+}
+
+
+.user_down_button>svg {
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    padding-inline-start: 0.2rem;
+    height: 24px;
+    width: 24px;
+    height: 0.8rem;
+}
+
+#profile_img {
+    cursor: pointer;
+    margin: 12px;
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    font-size: 11px;
+    border: none;
+    padding-inline-start: 0.1rem;
+    background-color:#e9e9e6; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap; 
+}    
+
+
+.pin_container {
+    margin: 0;
+    padding: o;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+    background-color: white;
+}
+
+.card {
+    position: relative;
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
+    background-color: black;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    border-radius: var(--card_border_radius);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.card_buttons_on_hover{
+    cursor: pointer;
+    margin: 5px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+
+    height: 3rem;
+    width: 42%;
+    border-radius: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    align-content: center;
+    opacity: 0;
+    background-color: #ff0000;
+    color: black;
+    transition: opacity 0.3s ease-in-out ;
+    border-radius: 99px;
+
+}
+
+.a{
+    padding: 0.3rem;
+    cursor: pointer;
+    margin: 10px;
+    height:23px ;
+    width: 28px;
+    border-radius: 20px;
+    background-color: #e9e9e6;
+    margin-top: 375px;
+    margin-left: 240px;
+    position: absolute;
+    flex-direction: column;
+    align-content: center;
+}
+
+.a1{
+    padding: 0.3rem;
+    cursor: pointer;
+    margin: 10px;
+    height:24px ;
+    width: 24px;
+    border-radius: 24px;
+    background-color: #e9e9e6;
+    margin-top: 375px;
+    margin-left: 310px;
+    position: absolute;
+    flex-direction: column;
+    align-content: center;
+}
+
+.b{
+    padding: 0.3rem;
+    cursor: pointer;
+    margin: 10px;
+    height:23px ;
+    width: 28px;
+    border-radius: 20px;
+    display: flex;
+    background-color: #e9e9e6;
+    margin-top: 520px;
+    margin-left: 240px;
+    position: absolute;
+    flex-direction: column;
+    align-content: center;
+}
+
+.b1{
+    padding: 0.3rem;
+    cursor: pointer;
+    margin: 10px;
+    height:24px ;
+    width: 24px;
+    border-radius: 24px;
+    display: flex;
+    background-color: #e9e9e6;
+    margin-top: 520px;
+    margin-left: 310px;
+    position: absolute;
+    flex-direction: column;
+    align-content: center;
+}
+
+.c{
+    padding: 0.3rem;
+    cursor: pointer;
+    margin: 10px;
+    height:23px ;
+    width: 28px;
+    border-radius: 20px;
+    background-color: #e9e9e6;
+    margin-top: 749px;
+    margin-left: 240px;
+    position: absolute;
+    flex-direction: column;
+    align-content: center;
+}
+
+.c1{
+    padding: 0.3rem;
+    cursor: pointer;
+    margin: 10px;
+    height:24px ;
+    width: 24px;
+    border-radius: 24px;
+    background-color: #e9e9e6;
+    margin-top: 749px;
+    margin-left: 310px;
+    position: absolute;
+    flex-direction: column;
+    align-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out ;
+}
+
+.card_buttons_on_hover:a{
+    opacity: 1;
+}
+
+
+.card_buttons_on_hover:hover {
+    opacity: 1;
+}
+
+.card_small {
+    grid-row-end: span var(--card_small);
+}
+
+.moda {
+    height: 230px;
+    width: 230px;
+    vertical-align: middle;
+    border-radius: var(--card_border_radius);
+}
+.card_medium {
+    grid-row-end: span var(--card_medium);
+}
+
+.lab{
+    height: 300px;
+    width: 230px;
+    vertical-align: middle;
+    border-radius: var(--card_border_radius);
+}
+
+.card_large {
+    grid-row-end: span var(--card_large);
+}
+
+.boy{
+    height: 420px;
+    width: 230px;
+    vertical-align: middle;
+    border-radius: var(--card_border_radius);
+}
